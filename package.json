@@ -1,0 +1,25 @@
+{
+  "name": "sky-blog",
+  "version": "1.0.0",
+  "description": "an internal tech blog",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "npm install && node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathanngandu/simple-blog.git"
+  },
+  "author": "Jonathan Ngandu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonathanngandu/simple-blog/issues"
+  },
+  "homepage": "https://github.com/jonathanngandu/simple-blog#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "npm": "^5.8.0",
+    "start": "^5.1.0"
+  }
+}
