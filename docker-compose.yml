@@ -2,11 +2,13 @@ version: "2"
 
 services:
   node:
+    container_name: node-app
     image: "node:8"
     # user: "node"
     working_dir: /app
     environment:
       - NODE_ENV=production
+      - REDIS_URL=redis://cache
     volumes:
       - .:/app
       - /app/node_modules
@@ -15,3 +17,18 @@ services:
     ports:
       - "8081:8081"
     command: "npm start"
+    links:
+      - redis
+
+  redis:
+    container_name: redis
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+    expose:
+      - "6379"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - 'API_PORT=6379'
+      - 'NODE_ENV=production'

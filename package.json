@@ -20,6 +20,13 @@
   "dependencies": {
     "express": "^4.16.4",
     "npm": "^5.8.0",
-    "start": "^5.1.0"
+    "start": "^5.1.0",
+    "body-parser": "^1.18.3",
+    "express-session": "^1.15.6",
+    "cors": "^2.8.5",
+    "errorhandler": "^1.5.0",
+    "mongoose": "^5.3.12",
+    "morgan": "^1.9.1",
+    "redis": "^2.8.0"
   }
 }
